@@ -39,3 +39,5 @@ plt.scatter(X, Y,color='red')
 plt.plot(x, lin_reg.predict(poly_reg.fit_transform(X)))
 plt.show()
 
+
+

@@ -51,4 +51,4 @@ svr_reg.fit(x_olcek,y_olcek)
 plt.scatter(x_olcek, y_olcek, color='red')
 plt.plot(x_olcek, svr_reg.predict(x_olcek))
 
-print(svr_reg.predict(x_olcek))
+print(svr_reg.predict([[6.6]]))
