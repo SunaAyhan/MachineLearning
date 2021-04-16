@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 
 import numpy as np
@@ -22,13 +21,14 @@ sc=StandardScaler()
 x_train = sc.fit_transform(x_train)
 x_test = sc.transform(x_test)
 
-#logistic regression
-from sklearn.linear_model import LogisticRegression
-logR = LogisticRegression(random_state=0)
-logR.fit(x_train,y_train)
+#SVM
+from sklearn.svm import SVC
+svc = SVC(kernel='rbf')
+svc.fit(x_train,y_train)
+
 
 #tahmin ettir
-y_pred = logR.predict(x_test)
+y_pred = svc.predict(x_test)
 print(y_pred)
 
 

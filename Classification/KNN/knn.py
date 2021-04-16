@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -18,21 +17,19 @@ x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.33, random_state=
 #egit ve uygula (fit / transform)
 from sklearn.preprocessing import StandardScaler
 sc=StandardScaler()
-
 x_train = sc.fit_transform(x_train)
 x_test = sc.transform(x_test)
 
-#logistic regression
-from sklearn.linear_model import LogisticRegression
-logR = LogisticRegression(random_state=0)
-logR.fit(x_train,y_train)
 
-#tahmin ettir
-y_pred = logR.predict(x_test)
-print(y_pred)
+#K Neighbors Method
+from sklearn.neighbors import KNeighborsClassifier
+#komşu sayısı doğru bulma oranında önemlidir
+knn = KNeighborsClassifier(n_neighbors=1, metric='minkowski') # komşu = 1, uzaklık bulma yöntemi = minkowski
+knn.fit(x_train, y_train)
+y_pred = knn.predict(x_test)
 
 
-#tahmin ve gerçek değerler ne kadar uyumlu? (sag alt dogru degerler sol alt yanlış değerler)
+#doğruluk oranı
 from sklearn.metrics import confusion_matrix
-cm = confusion_matrix(y_test,y_pred)
+cm = confusion_matrix(y_test, y_pred)
 print(cm)
