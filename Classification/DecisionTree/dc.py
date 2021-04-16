@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -20,14 +21,14 @@ sc=StandardScaler()
 x_train = sc.fit_transform(x_train)
 x_test = sc.transform(x_test)
 
-# naive bayes / gaussian
-from sklearn.naive_bayes import GaussianNB
-gnb = GaussianNB()
-gnb.fit(x_train,y_train)
+# decision tree
+from sklearn.tree import DecisionTreeClassifier
+dtc = DecisionTreeClassifier(criterion='entropy')
+dtc.fit(x_train,y_train)
 
 
 # tahmin ettir
-y_pred = gnb.predict(x_test)
+y_pred = dtc.predict(x_test)
 print(y_pred)
 
 
