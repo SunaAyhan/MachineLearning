@@ -32,7 +32,7 @@ y_pred = dtc.predict(x_test)
 print(y_pred)
 
 
-# tahmin ve gerçek değerler ne kadar uyumlu? (sag alt dogru degerler sol alt yanlış değerler)
+# kosegendekiler dogrudur
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test,y_pred)
 print(cm)

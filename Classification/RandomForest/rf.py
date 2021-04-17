@@ -32,7 +32,7 @@ y_pred = rfc.predict(x_test)
 print(y_pred)
 
 
-# tahmin ve gerçek değerler ne kadar uyumlu? (sag alt dogru degerler sol alt yanlış değerler)
+# tahmin ve gerçek değerler ne kadar uyumlu? köşegendekiler doğrudur
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test,y_pred)
 print(cm)
