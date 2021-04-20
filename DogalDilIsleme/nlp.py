@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Jun 15 11:00:54 2018
 
-@author: sadievrenseker
-"""
 
 import numpy as np
 import pandas as pd
@@ -17,18 +13,18 @@ import nltk
 from nltk.stem.porter import PorterStemmer
 ps = PorterStemmer()
 
-nltk.download('stopwords')
+nltk.download('stopwords') #anlamsız kelimeleri bul (it, they, did)
 from nltk.corpus import stopwords
 
 #Preprocessing (Önişleme)
 derlem = []
 for i in range(1000):
-    yorum = re.sub('[^a-zA-Z]',' ',yorumlar['Review'][i])
-    yorum = yorum.lower()
+    yorum = re.sub('[^a-zA-Z]',' ',yorumlar['Review'][i]) #harf olmayanları boşluk yap (noktalama işareti, karakter)
+    yorum = yorum.lower() #buyuk harfi kucuk harfe cevir
     yorum = yorum.split()
-    yorum = [ps.stem(kelime) for kelime in yorum if not kelime in set(stopwords.words('english'))]
-    yorum = ' '.join(yorum)
-    derlem.append(yorum)
+    yorum = [ps.stem(kelime) for kelime in yorum if not kelime in set(stopwords.words('english'))] #stopwordsleri çıkar
+    yorum = ' '.join(yorum) #kelimeleri boşluklarla ayır
+    derlem.append(yorum) # sadece yorumlar (1 ve 0 değerleri hariç)
     
 #Feautre Extraction ( Öznitelik Çıkarımı)
 #Bag of Words (BOW)
