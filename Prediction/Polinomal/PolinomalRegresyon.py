@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
-
+"""
+@author: Suna Ayhan
+"""
 
 
 import matplotlib.pyplot as plt

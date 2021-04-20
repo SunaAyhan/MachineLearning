@@ -1,4 +1,6 @@
-
+"""
+@author: Suna Ayhan
+"""
 
 import matplotlib.pyplot as plt
 import pandas as pd

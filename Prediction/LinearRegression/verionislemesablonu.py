@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
-
+"""
+@author: Suna Ayhan
+"""
 #1.kutuphaneler
 import numpy as np
 import matplotlib.pyplot as plt

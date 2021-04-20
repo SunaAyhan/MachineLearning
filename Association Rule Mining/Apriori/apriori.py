@@ -1,3 +1,8 @@
+
+"""
+@author: Suna Ayhan
+""" 
+
 # Apriori
 
 # Importing the libraries

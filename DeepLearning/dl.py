@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
-
+"""
+@author: Suna Ayhan
+"""
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -58,6 +60,7 @@ y_pred = classifier.predict(x_test)
 
 y_pred = (y_pred>0.5) #müşterinin bırakma oranı
 
+#diagondakiler dogru sayısını verir
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
 print(cm)
