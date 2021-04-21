@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-@author: Suna Ayhan
-"""
+
 
 import numpy as np
 import pandas as pd
@@ -34,7 +32,7 @@ y_pred = logR.predict(x_test)
 print(y_pred)
 
 
-#tahmin ve gerçek değerler ne kadar uyumlu? diagondakiler dogru sayısını verir
+#tahmin ve gerçek değerler ne kadar uyumlu? köşegendekiler doğrudur
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test,y_pred)
 print(cm)

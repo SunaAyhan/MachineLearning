@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-@author: Suna Ayhan
-"""
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -33,7 +31,7 @@ y_pred = gnb.predict(x_test)
 print(y_pred)
 
 
-# tahmin ve gerçek değerler ne kadar uyumlu? diagondakiler dogru sayısını verir
+# tahmin ve gerçek değerler ne kadar uyumlu? kçşegendekiler doğrudur
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test,y_pred)
 print(cm)
