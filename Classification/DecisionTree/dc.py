@@ -32,7 +32,7 @@ y_pred = dtc.predict(x_test)
 print(y_pred)
 
 
-# kosegendekiler dogrudur
+# diagondakiler dogrudur
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test,y_pred)
 print(cm)
